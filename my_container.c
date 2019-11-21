@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#define STACK_SIZE (1024 * 1024)
+#define STACK_SIZE (100 * 1024 * 1024)
 
 static char child_stack[STACK_SIZE];
 
