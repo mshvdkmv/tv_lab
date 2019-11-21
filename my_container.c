@@ -11,8 +11,9 @@
 #include <stdlib.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include <syscall.h>
-static char child_stack[1048576];
+#define STACK_SIZE (1024 * 1024)
+
+static char child_stack[STACK_SIZE];
 
 static int child_fn(void* arg) {
     
